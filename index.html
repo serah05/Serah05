@@ -8,25 +8,40 @@
 </head>
 <body>
 
-<h1 class="message">Happy Monthsary Love</h1>
+<!-- Clickable "Happy Monthsary Love" message -->
+<h1 class="message" onclick="showMessage()">Happy Monthsary Love</h1>
 
-<div class="flowers">
-  <div class="flower"></div>
-  <div class="flower"></div>
-  <div class="flower"></div>
-  <div class="flower"></div>
-  <div class="flower"></div>
+<!-- Hidden sweet message -->
+<div class="sweet-message" id="sweetMessage">
+  <p>You are the light that brightens my world, the smile that makes my heart skip a beat. Every moment spent with you feels like a beautiful dream that I never want to wake up from. I love you more than words could ever say. Here's to many more months of happiness, laughter, and love. 💕</p>
 </div>
 
-<!-- Small floating flowers in the background -->
-<div class="background-flowers">
-  <div class="small-flower"></div>
-  <div class="small-flower"></div>
-  <div class="small-flower"></div>
-  <div class="small-flower"></div>
-  <div class="small-flower"></div>
-  <div class="small-flower"></div>
+<div class="lights">
+  <div class="light"></div>
+  <div class="light"></div>
+  <div class="light"></div>
+  <div class="light"></div>
+  <div class="light"></div>
 </div>
+
+<!-- Small floating lights in the background -->
+<div class="background-lights">
+  <div class="small-light"></div>
+  <div class="small-light"></div>
+  <div class="small-light"></div>
+  <div class="small-light"></div>
+  <div class="small-light"></div>
+  <div class="small-light"></div>
+</div>
+
+<script>
+  // Function to display the sweet message after clicking
+  function showMessage() {
+    const messageElement = document.getElementById('sweetMessage');
+    messageElement.style.display = 'block'; // Show the hidden message
+    messageElement.classList.add('fade-in'); // Apply the fade-in animation
+  }
+</script>
 
 </body>
 </html>

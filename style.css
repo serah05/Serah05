@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: #0d1b2a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.message {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  color: lightpink;
+  margin-bottom: 40px;
+  text-shadow: 0 0 10px rgba(255, 192, 203, 0.7);
+}
+
+.lights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.light {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #ffccff;
+  box-shadow: 0 0 15px 5px #ff99cc;
+  animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    box-shadow: 0 0 15px 5px #ff99cc;
+  }
+  100% {
+    transform: scale(1.2);
+    box-shadow: 0 0 25px 15px #ff66cc;
+  }
+}
+
+/* Small floating lights in the background */
+.background-lights {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.small-light {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: lightpink;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: float 10s ease-in-out infinite;
+}
+
+.small-light:nth-child(1) {
+  top: 10%;
+  left: 15%;
+  animation-delay: 2s;
+}
+
+.small-light:nth-child(2) {
+  top: 30%;
+  left: 60%;
+  animation-delay: 4s;
+}
+
+.small-light:nth-child(3) {
+  top: 50%;
+  left: 80%;
+  animation-delay: 1s;
+}
+
+.small-light:nth-child(4) {
+  top: 70%;
+  left: 20%;
+  animation-delay: 3s;
+}
+
+.small-light:nth-child(5) {
+  top: 80%;
+  left: 40%;
+  animation-delay: 6s;
+}
+
+.small-light:nth-child(6) {
+  top: 20%;
+  left: 90%;
+  animation-delay: 5s;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(20px, -20px);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0.8;
+  }
+}
